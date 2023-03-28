@@ -6,21 +6,22 @@
 using namespace std;
 
 #include "Tree.h"
+#include "Forest.h"
 
 int main()
 {
 	int i, j;
 	Tree drzewko(5, '*', "green");
-
 	drzewko.printTree();
 
-	for (j = 0; j < drzewko.height; j++) {
+	/*for (j = 0; j < drzewko.height; j++) {
 		for (i = 0; i < 2 * drzewko.height-1; i++)
 			cout << drzewko.tab[j][i];
 		cout << endl;
 
-	}
-
+	}*/
+	//^^ tu powinien byc forest
+	
 
 	///ZAD DOM PRZEROBIĆ FUNKCJE PRINT TREE ŻEBY DRUKOWAŁA NA PODSTAWIE TABA 
 	//DOŁOŻYĆ SOBIE KLASE FOREST CPP I FOREST H, NA MATRYCY LASKU NARYSUJEMY DRZEWKA
