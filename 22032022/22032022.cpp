@@ -14,12 +14,25 @@ int main()
 	Tree drzewko(5, '*', "green");
 	drzewko.printTree();
 
+	Forest f;
+	Tree* drzewko1 = new Tree(5, 'J', "red");
+	Tree* drzewko2 = new Tree(5, '2', "green");
+	Tree* drzewko3 = new Tree(5, '3', "red");
+	drzewko1->printTree();
+	drzewko2->printTree();
+	drzewko3->printTree();
+	f.AddTree(drzewko1);
+	f.AddTree(drzewko2);
+	f.AddTree(drzewko3);
+	delete(drzewko1);
+	delete(drzewko2);
+	delete(drzewko3);
+
 	/*for (j = 0; j < drzewko.height; j++) {
 		for (i = 0; i < 2 * drzewko.height-1; i++)
 			cout << drzewko.tab[j][i];
-		cout << endl;
+		cout << endl;*/
 
-	}*/
 	//^^ tu powinien byc forest
 	
 

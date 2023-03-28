@@ -15,7 +15,7 @@ void Tree::printTree() {
 			cout << ' ';
 
 		for (i = 0; i < 2*j; i++)
-			cout << '*';
+			cout << symbol;
 
 		cout << endl;
 
@@ -24,7 +24,7 @@ void Tree::printTree() {
 	cout << "\033[0m";
 }
 
-Tree::Tree(int h, char s, string c, int x, int y)
+Tree::Tree(int h, char s, string c)
 {
 	int i, j;
 	height = h;
