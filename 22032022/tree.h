@@ -12,7 +12,7 @@ public:
 
 	void printTree();
 
-	Tree(int h, char s, string c);
+	Tree(int h, char s, string c, int x, int y);
 
 	~Tree();
 };

@@ -24,7 +24,7 @@ void Tree::printTree() {
 	cout << "\033[0m";
 }
 
-Tree::Tree(int h, char s, string c)
+Tree::Tree(int h, char s, string c, int x, int y)
 {
 	int i, j;
 	height = h;
