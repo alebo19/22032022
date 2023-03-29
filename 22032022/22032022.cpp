@@ -3,18 +3,34 @@
 // FOREST
 
 #include <iostream>
+#include <vector>
+#include <cassert>
 using namespace std;
 
-#include "Tree.h"
 #include "Forest.h"
 
 int main()
 {
 	int i, j;
-	Tree drzewko(5, '*', "green");
-	drzewko.printTree();
+	//Tree drzewko(5, '*', "green");
+	//drzewko.printTree();
+	Forest las = Forest(15, 60);
 
-	Forest f;
+	las.AddTree(5, '*', "green", 1, 1);
+	las.AddTree(8, 'x', "red", 3, 20);
+	las.AddTree(10, '*', "yellow", 5, 25);
+
+
+	las.PrintForest();
+}
+
+/*for (j = 0; j < las.H; j++) {
+	for (i = 0; i < las.W; i++)
+		cout << las.tab[j][i];
+	cout << endl;
+}*/
+
+		/*Forest f;
 	Tree* drzewko1 = new Tree(5, 'J', "red");
 	Tree* drzewko2 = new Tree(5, '2', "green");
 	Tree* drzewko3 = new Tree(5, '3', "red");
@@ -26,20 +42,7 @@ int main()
 	f.AddTree(drzewko3);
 	delete(drzewko1);
 	delete(drzewko2);
-	delete(drzewko3);
-
-	/*for (j = 0; j < drzewko.height; j++) {
-		for (i = 0; i < 2 * drzewko.height-1; i++)
-			cout << drzewko.tab[j][i];
-		cout << endl;*/
-
-	//^^ tu powinien byc forest
-	
-
-	///ZAD DOM PRZEROBIĆ FUNKCJE PRINT TREE ŻEBY DRUKOWAŁA NA PODSTAWIE TABA 
-	//DOŁOŻYĆ SOBIE KLASE FOREST CPP I FOREST H, NA MATRYCY LASKU NARYSUJEMY DRZEWKA
-
-
+	delete(drzewko3);*/
 
 	// KOLORY
 	/*cout << "\033[1;31m 00000000000000000000000000000000000000000000000000000000000000000000000000 \033[0m \n";
@@ -48,6 +51,6 @@ int main()
 	cout << "\033[1;34m 00000000000000000000000000000000000000000000000000000000000000000000000000 \033[0m \n";
 	cout << "\033[1;35m 00000000000000000000000000000000000000000000000000000000000000000000000000 \033[0m \n";
 	cout << "\033[1;36m 00000000000000000000000000000000000000000000000000000000000000000000000000 \033[0m \n";*/
-}
+
 
 

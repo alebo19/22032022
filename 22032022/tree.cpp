@@ -6,15 +6,14 @@ using namespace std;
 void Tree::printTree() {
 	int i, j;
 
-	if (color == "green") cout << "\033[1;32m";
-	if (color == "red") cout << "\033[1;31m";
+	cout << color;
 
 	for (j = 0; j < height; j++)
 	{
 		for (i = height - j - 1; i > 0; i--)
 			cout << ' ';
 
-		for (i = 0; i < 2*j; i++)
+		for (i = 0; i < 2*j+1; i++)
 			cout << symbol;
 
 		cout << endl;
@@ -28,14 +27,17 @@ Tree::Tree(int h, char s, string c)
 {
 	int i, j;
 	height = h;
+	width = 2 * h - 1;
 	symbol = s;
-	color = c;
+
+	if (c == "green") color = "\033[1;32m";
+	if (c == "red") color = "\033[1;31m";
+	if (c == "yellow") color = "\033[1;33m";
 
 	tab = new int* [height];		 
-
 	for (j = 0; j < height; j++) {
-		tab[j] = new int[2 * height - 1];
-		for (i = 0; i < 2 * height - 1; i++)
+		tab[j] = new int[width];
+		for (i = 0; i < width; i++)
 			tab[j][i] = 0;
 	}
 
